@@ -1,0 +1,29 @@
+author: manf
+database: false
+description: TODO
+main: de.javakara.manf.ichq.IchQ
+name: ICanHasQuiz
+startup: postworld
+url: http://forum.team-sod.de
+version: '1.0'
+softdepend: [Vault]
+commands:
+   quiz:
+      description: This is a demo command.
+   a:
+      description: This is a demo command.
+   b:
+      description: This is a demo command.
+permissions:
+    ichq.*:
+        default: op
+        description: Gives access to all commands
+        children:
+            ichq.use: true;
+            ichq.search: true;
+    ichq.use:
+        description: Allows to use /quiz
+        default: true
+    ichq.search:
+        description: Allows to use /quiz player
+        default: true
