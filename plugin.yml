@@ -5,7 +5,7 @@ main: de.javakara.manf.ichq.IchQ
 name: ICanHasQuiz
 startup: postworld
 url: http://forum.team-sod.de
-version: '1.0'
+version: '1.5'
 softdepend: [Vault]
 commands:
    quiz:
@@ -19,8 +19,8 @@ permissions:
         default: op
         description: Gives access to all commands
         children:
-            ichq.use: true;
-            ichq.search: true;
+            ichq.use: true
+            ichq.search: true
     ichq.use:
         description: Allows to use /quiz
         default: true

@@ -8,12 +8,15 @@ public class QuestionChecklist{
 	private final HashMap<Integer,Question> checklist;
 	private int currentQuestion;
 	private int answeredQuestions;
+	private int max;
+	
 	/**
 	 * Initialise a Quiz
 	 * @param questions
 	 * @param subject
 	 */
-	public QuestionChecklist(final ArrayList<Question> questions){
+	public QuestionChecklist(final ArrayList<Question> questions,int max){
+		this.max = max;
 		checklist = new HashMap<Integer,Question>();
 		answeredQuestions = 0;
 		int i = 0;
@@ -55,7 +58,7 @@ public class QuestionChecklist{
 	}
 	
 	public boolean isQuizComplete(){
-		return checklist.size() == 0;
+		return (checklist.size() == 0||(max != -1 && answeredQuestions == max));
 	}
 
 	public int getAnsweredQuestions() {

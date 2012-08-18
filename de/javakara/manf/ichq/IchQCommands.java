@@ -55,7 +55,7 @@ public class IchQCommands implements CommandExecutor {
 					} else if(finishedPlayers.contains(sender.getName())){
 						sender.sendMessage(lang("alreadyfinished"));
 					}else{
-						QuestionChecklist checklist = new QuestionChecklist(questions);
+						QuestionChecklist checklist = new QuestionChecklist(questions,Config.getInt(""));
 						checklists.put(sender.getName(), checklist);
 						sender.sendMessage(lang("startmsg"));
 						sendNewQuestion(sender,checklist);
@@ -100,6 +100,8 @@ public class IchQCommands implements CommandExecutor {
 						} catch (IOException e) {
 							e.printStackTrace();
 						}
+						checklists.remove(sender.getName());
+						Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(),Config.getString("correct-command").replace("<[p]>", sender.getName()));
 						checklists.remove(sender.getName());
 						return true;
 					}else{

@@ -24,6 +24,8 @@ public final class Config {
 			config.set("questionformat", "[Quiz] Frage <[#]>: <[Q]>");
 			config.set("answerformat","[Quiz]" + "Antwort a: <[0]> | Antwort b: <[1]>");
 			config.set("wrong-command","ban <[p]> Wrong Answer!");
+			config.set("correct-command","say <[p]> hat dass Quiz bestanden!");
+			config.set("questionstosolve", -1);
 			config.set("lang.perm","&1No Permissions");
 			config.set("lang.startmsg","[Quiz]Du hast das Quiz begonnen! beantworte immer mit /a oder /b!");
 			config.set("lang.inquizalready", "Du bist gerade in einem Quiz drin!");
