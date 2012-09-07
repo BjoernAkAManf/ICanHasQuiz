@@ -6,7 +6,6 @@ name: ICanHasQuiz
 startup: postworld
 url: http://forum.team-sod.de
 version: '1.5'
-softdepend: [Vault]
 commands:
    quiz:
       description: This is a demo command.

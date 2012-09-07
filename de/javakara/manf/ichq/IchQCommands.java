@@ -55,7 +55,7 @@ public class IchQCommands implements CommandExecutor {
 					} else if(finishedPlayers.contains(sender.getName())){
 						sender.sendMessage(lang("alreadyfinished"));
 					}else{
-						QuestionChecklist checklist = new QuestionChecklist(questions,Config.getInt(""));
+						QuestionChecklist checklist = new QuestionChecklist(questions,Config.getInt("questionstosolve"));
 						checklists.put(sender.getName(), checklist);
 						sender.sendMessage(lang("startmsg"));
 						sendNewQuestion(sender,checklist);

@@ -11,8 +11,6 @@ public class IchQ extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
-		if (getServer().getPluginManager().getPlugin("Vault") != null) {
-		}
 		try {
 			Config.initialise(getConfig(), getDataFolder());
 			Config.load();

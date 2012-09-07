@@ -58,6 +58,7 @@ public class QuestionChecklist{
 	}
 	
 	public boolean isQuizComplete(){
+		System.out.println(checklist.size() + " == 0||("+ max + " != -1 &&" + answeredQuestions +"==" + max);
 		return (checklist.size() == 0||(max != -1 && answeredQuestions == max));
 	}
 
